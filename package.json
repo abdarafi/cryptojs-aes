@@ -1,0 +1,25 @@
+{
+  "name": "cryptojs-aes",
+  "version": "1.0.0",
+  "description": "cryptojs-aes-php fork for node.js",
+  "main": "cryptojs-aes.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meetio/cryptojs-aes-php.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meetio/cryptojs-aes-php/issues"
+  },
+  "homepage": "https://github.com/meetio/cryptojs-aes-php#readme",
+  "dependencies": {
+    "crypto-js": "^3.1.6"
+  }
+}
